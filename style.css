@@ -295,11 +295,32 @@ nav a:hover {
         background-repeat: no-repeat;
     }
 
+    .hero, .bio-intro, .contact {
+        padding: 40px 20px; /* Consistent padding */
+        text-align: center; /* Consistent text alignment */
+    }
+
     .bio-intro .bio-content p, #typing-wrapper p {
-        max-width: 90%; /* Reduce paragraph width slightly */
-        margin: 20px auto; /* Center the paragraphs */
-        padding: 0 15px; /* Increase padding */
-        text-align: center; /* leave text left align, or use center */
-        line-height: 1.6; /* Ensure line height */
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 10px 15px;
+        text-align: left; /* or text-align: center; */
+        line-height: 1.6;
+    }
+
+    .contact p {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 10px 15px;
+        text-align: left; /* or text-align: center; */
+        line-height: 1.6;
+    }
+
+    .hero h1, .bio-intro h2, .contact h2 {
+        font-size: 1.8em; /* Consistent header size */
+    }
+
+    .hero img {
+        max-width: 250px; /* Consistent image size */
     }
 }
