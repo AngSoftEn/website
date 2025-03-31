@@ -289,3 +289,10 @@ nav a:hover {
 .carousel:hover {
     animation-play-state: paused;
 }
+/* Mobile-specific adjustments (ONLY for hero background image) */
+@media (max-width: 768px) {
+    .hero::before {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
