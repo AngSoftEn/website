@@ -301,9 +301,9 @@ nav a:hover {
     }
 
     .bio-intro .bio-content p, #typing-wrapper p, .contact p {
-        max-width: 90%;
+        max-width: 90%; /* or 85% */
         margin: 20px auto;
-        padding: 10px 15px;
+        padding: 10px 10px; /* Reduced horizontal padding */
         text-align: center; /* Center paragraph text */
         line-height: 1.6;
     }
@@ -315,23 +315,23 @@ nav a:hover {
 
     .hero img {
         max-width: 200px;
-        margin: 20px auto; /* Center hero image */
+        margin: 20px auto;
     }
 
     /* Carousel Adjustments */
     .carousel img {
-        height: 50px; /* Reduced carousel image size */
-        margin-right: 15px; /* Reduced margin */
+        height: 50px;
+        margin-right: 15px;
     }
 
     .carousel-container.reverse .carousel img {
         height: 50px;
-        margin-right: 300px; /* reduced reverse margin */
+        margin-right: 300px;
     }
 
     .carousel-container::before,
     .carousel-container::after {
-        width: 30px; /* Reduced fade out width */
+        width: 30px;
     }
 
     @keyframes scroll {
