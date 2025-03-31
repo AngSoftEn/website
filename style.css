@@ -296,31 +296,51 @@ nav a:hover {
     }
 
     .hero, .bio-intro, .contact {
-        padding: 40px 20px; /* Consistent padding */
-        text-align: center; /* Consistent text alignment */
+        padding: 40px 20px;
+        text-align: center;
     }
 
-    .bio-intro .bio-content p, #typing-wrapper p {
+    .bio-intro .bio-content p, #typing-wrapper p, .contact p {
         max-width: 90%;
         margin: 20px auto;
         padding: 10px 15px;
-        text-align: left; /* or text-align: center; */
-        line-height: 1.6;
-    }
-
-    .contact p {
-        max-width: 90%;
-        margin: 20px auto;
-        padding: 10px 15px;
-        text-align: left; /* or text-align: center; */
+        text-align: center; /* Center paragraph text */
         line-height: 1.6;
     }
 
     .hero h1, .bio-intro h2, .contact h2 {
-        font-size: 1.8em; /* Consistent header size */
+        font-size: 1.8em;
+        margin-bottom: 25px;
     }
 
     .hero img {
-        max-width: 250px; /* Consistent image size */
+        max-width: 200px;
+        margin: 20px auto; /* Center hero image */
+    }
+
+    /* Carousel Adjustments */
+    .carousel img {
+        height: 50px; /* Reduced carousel image size */
+        margin-right: 15px; /* Reduced margin */
+    }
+
+    .carousel-container.reverse .carousel img {
+        height: 50px;
+        margin-right: 300px; /* reduced reverse margin */
+    }
+
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 30px; /* Reduced fade out width */
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50%)); }
+    }
+
+    @keyframes scrollReverse {
+        0% { transform: translateX(calc(-50%)); }
+        100% { transform: translateX(0); }
     }
 }
