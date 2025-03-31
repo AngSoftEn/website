@@ -1,73 +1,294 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelos Angelis - CV</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="cv-page">
-        <section class="cv">
-            <h2>CV</h2>
-            <div class="cv-content">
-                <div class="cv-section">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="cv-entry">
-                        <h4>Bachelor of Science in Electronic Engineering</h4>
-                        <p><i class="fas fa-university"></i> University of Thessaly</p>
-                        <p><i class="fas fa-calendar-alt"></i> Duration: 4 years (8 semesters)</p>
-                        <p><i class="fas fa-file-alt"></i> ECTS: 240</p>
-                    </div>
-                </div>
-                <div class="cv-section">
-                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-                    <div class="cv-entry">
-                        <h4><i class="fas fa-building"></i> ENERSYS</h4>
-                        <p><i class="fas fa-calendar-alt"></i> Duration: 12/2020 - TODAY</p>
-                    </div>
-					<div class="cv-entry">
-                        <h4><i class="fas fa-hard-hat"></i> Solar Construction</h4>
-                        <p><i class="fas fa-calendar-alt"></i> Duration: 12/2020 - 05/2021</p>
-                    </div>
-                    <div class="cv-entry">
-                        <h4><i class="fas fa-tools"></i> Electrical Installations</h4>
-                        <p><i class="fas fa-calendar-alt"></i> From: 05/2021 - 05/2022</p>
-                    </div>
-                    
-                    <div class="cv-entry">
-                        <h4><i class="fas fa-laptop-code"></i> Maintance & Troubleshooting</h4>
-                        <p><i class="fas fa-calendar-alt"></i> Duration: 09/2022 - TODAY</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="contact" class="section contact">
-            <h2>Contact</h2>
-            <p>
-                <a href="YOUR_LINKEDIN_URL" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                (Coming soon...)
-            </p>
-        </section>
-    </main>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Changed from #fff */
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero img {
+    max-width: 80%; /* Adjusted for mobile */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hero h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 20px;
+    font-size: 2em; /* Adjusted for mobile */
+    font-weight: 600;
+    color: #333;
+    white-space: normal; /* Allow text to wrap */
+}
+
+.hero .about-link {
+    font-size: 1.2em; /* Adjusted for mobile */
+    color: #555;
+    text-decoration: none;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/IMG_2873bnw.JPEG');
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(1.5);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero.scrolled .hero-content {
+    transform: translateY(-50px);
+}
+
+.hero.scrolled img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.bio-intro, .contact {
+    padding: 20px; /* Adjusted for mobile */
+    max-width: 100%; /* Adjusted for mobile */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8; /* Added to match body */
+}
+
+.bio-intro .bio-content {
+    max-width: 100%; /* Adjusted for mobile */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bio-intro .bio-content p {
+    max-width: 100%; /* Adjusted for mobile */
+    text-align: left; /* Adjusted for mobile */
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+#typing-wrapper p {
+    font-family: "El Messiri", sans-serif;
+    max-width: 100%; /* Adjusted for mobile */
+    text-align: left;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+.bio-content h2, .contact h2 {
+    font-size: 1.8em; /* Adjusted for mobile */
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.cv-page {
+    padding-top: 80px;
+}
+
+.cv {
+    padding: 20px 0; /* Adjusted for mobile */
+    max-width: 100%; /* Adjusted for mobile */
+    margin: 0 auto;
+}
+
+.cv h2 {
+    font-size: 2em; /* Adjusted for mobile */
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cv-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px; /* Adjusted for mobile */
+}
+
+.cv-section {
+    background-color: #fff;
+    padding: 20px; /* Adjusted for mobile */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cv-section h3 {
+    font-size: 1.5em; /* Adjusted for mobile */
+    font-weight: 600;
+    margin-bottom: 15px; /* Adjusted for mobile */
+    display: flex;
+    align-items: center;
+}
+
+.cv-section h3 i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.cv-entry {
+    margin-bottom: 15px; /* Adjusted for mobile */
+}
+
+.cv-entry h4 {
+    font-size: 1.1em; /* Adjusted for mobile */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cv-entry i {
+    margin-right: 5px;
+}
+
+.typing-cursor {
+    border-right: .15em solid orange !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.typing-cursor.fade-in {
+    opacity: 1 !important;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%; /* Adjusted for mobile */
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.carousel {
+    width: max-content;
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+.carousel.reverse {
+    width: max-content;
+    animation: scrollReverse 15s linear infinite;
+}
+
+.carousel img {
+    height: 60px; /* Adjusted for mobile */
+    margin-right: 10px; /* Adjusted for mobile */
+    object-fit: contain;
+}
+
+.carousel-container.reverse .carousel img {
+    height: 60px; /* Adjusted for mobile */
+    margin-right: 15px; /* Adjusted for mobile */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50%)); }
+}
+
+@keyframes scrollReverse {
+    0% { transform: translateX(calc(-50%)); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50px; /* Adjusted for mobile */
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f8f8f8, transparent);
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f8f8f8, transparent);
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .hero::before {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
