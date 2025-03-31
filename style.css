@@ -289,7 +289,6 @@ nav a:hover {
 .carousel:hover {
     animation-play-state: paused;
 }
-/* Mobile-specific adjustments (ONLY for hero background image and about me paragraph) */
 @media (max-width: 768px) {
     .hero::before {
         background-size: contain;
@@ -297,8 +296,10 @@ nav a:hover {
     }
 
     .bio-intro .bio-content p, #typing-wrapper p {
-        max-width: 100%; /* Make paragraph full width on mobile */
-        padding: 0 10px; /* Add some padding for readability */
-        text-align: left; /* Align text left on mobile */
+        max-width: 90%; /* Reduce paragraph width slightly */
+        margin: 20px auto; /* Center the paragraphs */
+        padding: 0 15px; /* Increase padding */
+        text-align: center; /* leave text left align, or use center */
+        line-height: 1.6; /* Ensure line height */
     }
 }
