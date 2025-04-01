@@ -289,58 +289,213 @@ nav a:hover {
 .carousel:hover {
     animation-play-state: paused;
 }
-@media (max-width: 768px) {
-    .hero::before {
-        background-size: contain;
-        background-repeat: no-repeat;
+/* Extra Small (XS) - 320px - 479px */
+@media (max-width: 479px) {
+    header {
+        padding: 10px 0;
     }
 
-    .hero, .bio-intro, .contact {
-        padding: 40px 15px; /* Reduced horizontal padding */
-        text-align: center;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .bio-intro .bio-content p, #typing-wrapper p, .contact p {
-        max-width: 90%;
-        margin: 20px auto;
-        padding: 10px 10px;
-        text-align: center;
-        line-height: 1.6;
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        margin: 5px 0;
     }
 
-    .hero h1, .bio-intro h2, .contact h2 {
-        font-size: 1.7em; /* Slightly reduced header size */
-        margin-bottom: 20px; /* Reduced header margin */
+    .hero {
+        margin-top: 60px;
     }
 
     .hero img {
-        max-width: 220px; /* Adjusted image size */
-        margin: 20px auto;
+        max-width: 80%;
     }
 
-    /* Carousel Adjustments */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .bio-intro, .contact {
+        padding: 30px 15px;
+    }
+
+    .bio-intro .bio-content p, #typing-wrapper p {
+        max-width: 90%;
+        font-size: 0.9em;
+    }
+
+    .bio-content h2, .contact h2 {
+        font-size: 1.8em;
+    }
+
     .carousel img {
-        height: 45px; /* Reduced carousel image size */
-        margin-right: 12px; /* Reduced margin */
+        height: 60px;
+        margin-right: 15px;
     }
 
     .carousel-container.reverse .carousel img {
-        height: 45px;
-        margin-right: 280px; /* reduced reverse margin */
+        height: 60px;
+        margin-right: 300px;
     }
 
     .carousel-container::before,
     .carousel-container::after {
-        width: 25px; /* Reduced fade out width */
+        width: 60px;
     }
 
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-50%)); }
+    .cv {
+        padding: 40px 15px;
     }
 
-    @keyframes scrollReverse {
-        0% { transform: translateX(calc(-50%)); }
+    .cv h2 {
+        font-size: 2em;
+    }
+
+    .cv-section h3 {
+        font-size: 1.6em;
+    }
+}
+
+/* Small (S) - 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin: 5px 0;
+    }
+
+    .hero {
+        margin-top: 70px;
+    }
+
+    .hero img {
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .bio-intro, .contact {
+        padding: 40px 20px;
+    }
+
+    .bio-intro .bio-content p, #typing-wrapper p {
+        max-width: 95%;
+    }
+
+    .bio-content h2, .contact h2 {
+        font-size: 1.9em;
+    }
+
+    .carousel img {
+        height: 70px;
+        margin-right: 20px;
+    }
+
+    .carousel-container.reverse .carousel img {
+        height: 70px;
+        margin-right: 400px;
+    }
+
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 80px;
+    }
+
+    .cv {
+        padding: 50px 20px;
+    }
+
+    .cv h2 {
+        font-size: 2.2em;
+    }
+
+    .cv-section h3 {
+        font-size: 1.7em;
+    }
+}
+
+/* Medium (M) - 768px - 991px (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 20px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 10px 25px;
+        font-size: 1.1em;
+        margin: 0 10px;
+    }
+
+    .hero {
+        margin-top: 80px;
+    }
+
+    .hero img {
+        max-width: 60%;
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+    }
+
+    .bio-intro, .contact {
+        padding: 60px 30px;
+    }
+
+    .bio-intro .bio-content p, #typing-wrapper p {
+        max-width: 70%;
+    }
+
+    .bio-content h2, .contact h2 {
+        font-size: 2.1em;
+    }
+
+    .carousel img {
+        height: 90px;
+        margin-right: 40px;
+    }
+
+    .carousel-container.reverse .carousel img {
+        height: 90px;
+        margin-right: 700px;
+    }
+
+    .carousel-container::before,
+    .carousel-container::after {
+        width: 100px;
+    }
+
+    .cv {
+        padding: 60px 30px;
+    }
+
+    .cv h2 {
+        font-size: 2.4em;
+    }
+
+    .cv-section h3 {
+        font-size: 1.9em;
+    }
+}
         100% { transform: translateX(0); }
     }
 }
