@@ -289,46 +289,56 @@ nav a:hover {
 .carousel:hover {
     animation-play-state: paused;
 }
-/* Extra Small (XS) - 320px - 479px */
-@media (max-width: 479px) {
-    header {
-        padding: 10px 0;
-    }
 
-    nav ul {
+
+/* Extra Small (XS) - 320px - 479px (Portrait) */
+@media (max-width: 479px) and (orientation: portrait) {
+    header nav ul {
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        padding: 10px 0; /* Vertical padding */
     }
 
-    nav a {
+    header nav ul li a {
         padding: 10px 15px;
         font-size: 0.9em;
         margin: 5px 0;
+        display: block;
+        text-align: center;
     }
 
     .hero {
-        margin-top: 60px;
+        margin-top: 60px; /* Adjusted top margin */
     }
 
     .hero img {
-        max-width: 80%;
+        max-width: 90%; /* Responsive image */
+        margin: 20px auto;
     }
 
     .hero h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+        text-align: center;
     }
 
     .bio-intro, .contact {
-        padding: 30px 15px;
+        padding: 30px 10px; /* Reduced padding */
+        text-align: center;
     }
 
     .bio-intro .bio-content p, #typing-wrapper p {
-        max-width: 90%;
+        max-width: 95%; /* Responsive paragraph */
+        margin: 15px auto; /* Reduced margin */
+        padding: 10px 5px; /* Reduced padding */
+        line-height: 1.5;
         font-size: 0.9em;
     }
 
     .bio-content h2, .contact h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .carousel img {
@@ -338,7 +348,7 @@ nav a:hover {
 
     .carousel-container.reverse .carousel img {
         height: 60px;
-        margin-right: 300px;
+        margin-right: 250px;
     }
 
     .carousel-container::before,
@@ -347,11 +357,12 @@ nav a:hover {
     }
 
     .cv {
-        padding: 40px 15px;
+        padding: 40px 10px;
     }
 
     .cv h2 {
         font-size: 2em;
+        text-align: center;
     }
 
     .cv-section h3 {
@@ -359,21 +370,21 @@ nav a:hover {
     }
 }
 
-/* Small (S) - 480px - 767px */
-@media (min-width: 480px) and (max-width: 767px) {
-    header {
+/* Small (S) - 480px - 767px (Portrait) */
+@media (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
         padding: 15px 0;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
+    header nav ul li a {
         padding: 10px 20px;
         font-size: 1em;
         margin: 5px 0;
+        display: block;
+        text-align: center;
     }
 
     .hero {
@@ -382,22 +393,31 @@ nav a:hover {
 
     .hero img {
         max-width: 90%;
+        margin: 20px auto;
     }
 
     .hero h1 {
-        font-size: 2.2em;
+        font-size: 2em;
+        text-align: center;
     }
 
     .bio-intro, .contact {
         padding: 40px 20px;
+        text-align: center;
     }
 
     .bio-intro .bio-content p, #typing-wrapper p {
         max-width: 95%;
+        margin: 20px auto;
+        padding: 15px 5px;
+        line-height: 1.6;
+        font-size: 1em;
     }
 
     .bio-content h2, .contact h2 {
-        font-size: 1.9em;
+        font-size: 1.8em;
+        margin-bottom: 25px;
+        text-align: center;
     }
 
     .carousel img {
@@ -407,7 +427,7 @@ nav a:hover {
 
     .carousel-container.reverse .carousel img {
         height: 70px;
-        margin-right: 400px;
+        margin-right: 350px;
     }
 
     .carousel-container::before,
@@ -421,6 +441,7 @@ nav a:hover {
 
     .cv h2 {
         font-size: 2.2em;
+        text-align: center;
     }
 
     .cv-section h3 {
@@ -428,21 +449,21 @@ nav a:hover {
     }
 }
 
-/* Medium (M) - 768px - 991px (Tablets) */
+/* Tablet (M) - 768px - 991px */
 @media (min-width: 768px) and (max-width: 991px) {
-    header {
+    header nav ul {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
         padding: 20px 0;
     }
 
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    nav a {
+    header nav ul li a {
         padding: 10px 25px;
         font-size: 1.1em;
         margin: 0 10px;
+        display: inline-block;
+        text-align: center;
     }
 
     .hero {
@@ -451,22 +472,31 @@ nav a:hover {
 
     .hero img {
         max-width: 60%;
+        margin: 20px auto;
     }
 
     .hero h1 {
-        font-size: 2.8em;
+        font-size: 2.5em;
+        text-align: center;
     }
 
     .bio-intro, .contact {
         padding: 60px 30px;
+        text-align: center;
     }
 
     .bio-intro .bio-content p, #typing-wrapper p {
-        max-width: 70%;
+        max-width: 80%;
+        margin: 30px auto;
+        padding: 20px 10px;
+        line-height: 1.7;
+        font-size: 1em;
     }
 
     .bio-content h2, .contact h2 {
-        font-size: 2.1em;
+        font-size: 2em;
+        margin-bottom: 30px;
+        text-align: center;
     }
 
     .carousel img {
@@ -476,7 +506,7 @@ nav a:hover {
 
     .carousel-container.reverse .carousel img {
         height: 90px;
-        margin-right: 700px;
+        margin-right: 600px;
     }
 
     .carousel-container::before,
@@ -490,12 +520,10 @@ nav a:hover {
 
     .cv h2 {
         font-size: 2.4em;
+        text-align: center;
     }
 
     .cv-section h3 {
         font-size: 1.9em;
-    }
-}
-        100% { transform: translateX(0); }
     }
 }
