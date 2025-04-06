@@ -17,6 +17,13 @@ header {
     z-index: 100;
 }
 
+header nav ul li a img {
+    height: 20px; /* Adjust the icon size as needed */
+    width: auto;
+    margin-right: 8px; /* Add some spacing between the icon and text */
+    vertical-align: middle; /* Align the icon vertically with the text */
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -182,43 +189,75 @@ nav a:hover {
     100% { transform: translateX(0); }
 }
 
-.nav-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.cv-page .cv {
+    padding: 50px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.cv-page .cv h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cv-page .cv-content {
     width: 100%;
-    background-color: #fff; /* Or any background color */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-
-.nav-bottom ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 10px 0;
-}
-
-.nav-bottom a {
-    text-decoration: none;
-    color: #333;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
-.nav-bottom i {
-    font-size: 1.5em; /* Adjust icon size */
+.cv-page .cv-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cv-page .cv-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.cv-page .cv-entry {
+    padding: 15px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    opacity: 1; /* Ensure visibility */
+    transform: translateY(0); /* Ensure no initial transform */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.cv-page .cv-entry:last-child {
+    border-bottom: none;
+}
+
+.cv-page .cv-entry h4 {
+    font-size: 1.3em;
     margin-bottom: 5px;
+    color: #555;
 }
 
+.cv-page .cv-entry p {
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 1em;
+}
+
+
+ 
+ 
 @media (max-width: 767px) {
-    /* Hide the top header navigation on mobile */
-    header {
-        display: none;
-    }
+   
+  
 
     body {
         margin: 0;
@@ -287,7 +326,7 @@ nav a:hover {
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        margin: 10px auto; /* Adjusted top/bottom margin */
+        margin: 10px 20px; /* Adjusted top/bottom margin */
         width: 100%; /* Take full width of the content block */
         font-size: 1em;
         line-height: 1.6;
@@ -369,57 +408,71 @@ nav a:hover {
         background: linear-gradient(to left, #f8f8f8, transparent);
     }
 
+
+
+   
+
+    .cv-page .cv {
+        padding: 20px;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .cv-page .cv h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cv-page .cv-content {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .cv-page .cv-section {
-        margin-bottom: 25px;
-        padding: 0 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin-bottom: 15px;
+        width: 100%;
         box-sizing: border-box;
     }
 
     .cv-page .cv-section h3 {
         font-size: 1.5em;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #333;
+    }
+
+    .cv-page .cv-entry {
+        padding: 10px 0;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #eee;
+        box-sizing: border-box;
+
+        /* Explicitly reset desktop styles and set mobile defaults */
+        opacity: 1 !important; /* Ensure visibility, important for override */
+        transform: translateY(0) !important; /* Reset any desktop transforms */
+    }
+
+    .cv-page .cv-entry:last-child {
+        border-bottom: none;
     }
 
     .cv-page .cv-entry h4 {
         font-size: 1.1em;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
+        color: #555;
     }
 
     .cv-page .cv-entry p {
-        margin-bottom: 5px;
-    }
-
-    .nav-bottom {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 100;
-        box-sizing: border-box;
-    }
-
-    .nav-bottom ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        margin: 0;
-        padding: 10px 0;
-        box-sizing: border-box;
-    }
-
-    .nav-bottom a {
-        text-decoration: none;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-    }
-
-    .nav-bottom i {
-        font-size: 1.5em;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
+        color: #777;
+        font-size: 0.9em;
     }
 }
