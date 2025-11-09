@@ -9,16 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Julius+Sans+One&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
     <header>
+        <!-- Hamburger button (for mobile). JS toggles nav-list.show -->
         <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
             <span class="hamburger-bar" aria-hidden="true"></span>
             <span class="hamburger-bar" aria-hidden="true"></span>
             <span class="hamburger-bar" aria-hidden="true"></span>
         </button>
+
         <nav id="main-nav" role="navigation" aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="index.html"><img src="headers/home.png" alt="Home Icon">Home</a></li>
@@ -39,23 +42,19 @@
 
         <section id="bio-intro" class="bio-intro">
             <div class="bio-content">
-                <p>
-                    Hi, I'm Angelos! I'm 28 years old and from Greece, passionate about powering the future with solar energy. My journey in this sector has been incredibly rewarding, covering the[...] 
-                </p>
-                <p>
-                    I've built my career on hands-on installation and construction, and I've successfully managed complex cabling projects totaling over 30MW. Additionally, I have experience in mo[...] 
-                </p>
-                <p>
-                    For the past 3 years, I've been ensuring the smooth operation of 300+ parks, leveraging my expertise in troubleshooting and maintenance to maximize their performance and reliab[...] 
-                </p>
+                <p>Hi, I'm Angelos! I'm 28 years old and from Greece, passionate about powering the future with solar energy. My journey in this sector has been incredibly rewarding, covering the[...]</p>
+                <p>I've built my career on hands-on installation and construction, and I've successfully managed complex cabling projects totaling over 30MW. Additionally, I have experience in mo[...]</p>
+                <p>For the past 3 years, I've been ensuring the smooth operation of 300+ parks, leveraging my expertise in troubleshooting and maintenance to maximize their performance and reliab[...]</p>
 
                 <div class="carousel-container">
                     <div class="carousel">
+                        <!-- Prefer converted webp/mp4 icons; png used as fallback -->
                         <img loading="lazy" src="icons/1.png" alt="Icon 1" width="80" height="80">
                         <img loading="lazy" src="icons/2.png" alt="Icon 2" width="80" height="80">
                         <img loading="lazy" src="icons/3.png" alt="Icon 3" width="80" height="80">
                         <img loading="lazy" src="icons/4.png" alt="Icon 4" width="80" height="80">
                         <img loading="lazy" src="icons/5.png" alt="Icon 5" width="80" height="80">
+                        <!-- duplicated items for continuous scroll -->
                         <img loading="lazy" src="icons/1.png" alt="Icon 1" width="80" height="80">
                         <img loading="lazy" src="icons/2.png" alt="Icon 2" width="80" height="80">
                         <img loading="lazy" src="icons/3.png" alt="Icon 3" width="80" height="80">
@@ -63,6 +62,7 @@
                         <img loading="lazy" src="icons/5.png" alt="Icon 5" width="80" height="80">
                     </div>
                 </div>
+
                 <div class="carousel-container">
                     <div class="carousel reverse">
                         <img loading="lazy" src="icons/6.png" alt="Icon 6" width="80" height="80">
