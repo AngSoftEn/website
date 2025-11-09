@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV — Angelos Angelis, Electronic Engineer specialized in solar installation, commissioning and maintenance.">
     <title>Angelos Angelis - CV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="" crossorigin="anonymous">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
-        <nav>
+        <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="main-nav" role="navigation" aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="index.html"><img src="headers/home.png" alt="Home Icon">Home</a></li>
                 <li><a href="cv.html"><img src="headers/cv2.png" alt="CV Icon">CV</a></li>
@@ -21,7 +28,7 @@
         </nav>
     </header>
 
-    <main class="cv-page">
+    <main id="main" class="cv-page">
         <section class="cv">
             <h2>CV</h2>
             <div class="cv-content">
@@ -59,15 +66,13 @@
         <section id="contact" class="section contact">
             <h2>Contact</h2>
             <p>
-                <a href="YOUR_LINKEDIN_URL" target="_blank">
+                <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
                 (Coming soon...)
             </p>
         </section>
     </main>
-
-    
 
     <script src="script.js"></script>
 </body>
